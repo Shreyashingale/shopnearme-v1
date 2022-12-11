@@ -1,0 +1,27 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+}
+.menu{
+    font-size: 1.5vw;
+    cursor: pointer;
+    margin-left: 1vw;
+}
+.menu Link {
+    text-decoration: none;
+}
+.menuTitle{
+    
+    font-size: 2vw;
+}
+.menuTitle span{
+    color: white;
+    font-weight: bold;
+}
+.menuList{
+    color:rgb(254, 61, 209);
+
+}
+.menuList:hover{
+    color: pink;
+}

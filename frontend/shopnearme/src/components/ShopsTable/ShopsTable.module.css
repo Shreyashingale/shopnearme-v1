@@ -1,0 +1,24 @@
+.tableBox{
+    position: absolute;
+  height: 0px;
+  left: 18%;
+  top: 40%;
+  
+  }
+  th {
+    min-width: 160px;
+    padding: 10px;
+    color: #9FA2B4;
+  }
+  td{
+    padding: 15px !important;
+    font-weight: 500;
+  
+  }
+  tr{
+    border-bottom: 1px solid #DFE0EB !important;
+    justify-content: center;
+    text-align: center;
+    max-width: 90px!important;
+  
+  }
