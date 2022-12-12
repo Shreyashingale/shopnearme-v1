@@ -9,7 +9,7 @@
     width: fit-content;
     align-items: center;
     margin-top: 10%;
-}
+} 
 .inputBox{
 display: flex;
 width: 100%;
@@ -22,4 +22,11 @@ h1{
     position: absolute;
     top:50%;
     left: 50%;
+}
+.searchBtn{
+    cursor: pointer;
+    width:350px;
+    background-color: #343a40;
+    color: whitesmoke;
+    font-weight: 700;
 }

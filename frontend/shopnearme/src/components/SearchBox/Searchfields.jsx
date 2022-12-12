@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import styles from './Searchfield.module.css';
 import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
 import Menu from '../NavBar/Menu';
 import axios from 'axios';
 import ShopsTable from '../ShopsTable/ShopsTable';
@@ -22,7 +21,7 @@ const Searchfields = () => {
             .catch((e) => {
                 console.log(e);
             })
-    } 
+    }
     const changeInputField = (e) => {
         setCategoryfield(e.target.value)
 
@@ -30,7 +29,7 @@ const Searchfields = () => {
     const hanldeDropDownChange = (e) => {
         setDropDownField(e.target.value)
     }
-    const changePincodeField = (e) =>{
+    const changePincodeField = (e) => {
         setPinCodeField(e.target.value);
         console.log(pinCodeField);
     }
@@ -54,7 +53,7 @@ const Searchfields = () => {
                             placeholder="Enter PinCode"
                             className={styles.inputField}
                             aria-label="Search"
-                            onChange ={changePincodeField}
+                            onChange={changePincodeField}
                         />
 
                         <Form.Select onChange={hanldeDropDownChange} aria-label="Default select example" className={styles.inputField}>
@@ -66,7 +65,7 @@ const Searchfields = () => {
 
                         </Form.Select>
 
-                        <Button className={styles.searchBtn} variant="outline-success" onClick={getShops}>Search</Button>
+                        <button className={styles.searchBtn}  onClick={getShops}>Search</button>
                     </div>
 
 
