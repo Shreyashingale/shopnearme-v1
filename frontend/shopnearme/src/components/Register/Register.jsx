@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import Menu from '../NavBar/Menu'
 import styles from './Register.module.css'
+import Form from 'react-bootstrap/Form';
+
 const Register = () => {
   //issue faced the name of variable should be equal to the schema names
   const [shop, setShop] = useState({
@@ -11,13 +13,13 @@ const Register = () => {
     console.log(e);
     name = e.target.name;
     value = e.target.value;
-
+    console.log(shop[name]);
     setShop({ ...shop, [name]: value })
 
   }
   const postData = async (e) => {
     e.preventDefault();
-    const { shopName, category, services, address, coOrdinates,pinCode } = shop;
+    const { shopName, category, services, address, coOrdinates, pinCode } = shop;
 
     const res = await fetch('/addShop', {
       method: "POST",
@@ -25,14 +27,14 @@ const Register = () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        shopName, category, services, address, coOrdinates ,pinCode
+        shopName, category, services, address, coOrdinates, pinCode
       })
     });
-    const data  = await res.json();
-    if(res.status ===422 || !data){
+    const data = await res.json();
+    if (res.status === 422 || !data) {
       window.alert("Invalid Registration");
     }
-    else{
+    else {
       window.alert("succesfuly registered");
     }
   }
@@ -46,9 +48,26 @@ const Register = () => {
             <input type="text" className="form-control" aria-describedby="emailHelp" placeholder="Enter Shop Name" name='shopName' value={shop.shopName} onChange={handleInputs} />
             <small className="form-text text-muted">Enter the shop name that you want to display</small>
           </div>
-          <div className="form-group">
+          <div className="form-group"> 
             <label>Category</label>
             <input type="text" className="form-control" placeholder="Category" name='category' value={shop.category} onChange={handleInputs} />
+            {/*<Form  onChange={handleInputs}>
+              {/*<Form.Select onChange={handleInputs} aria-label="Default select example" value={shop.category} style={{width:"400px" , height:"40px"}}>
+                <option>Select Shop Category</option>
+                <option value="food">Food</option>
+                <option value="cafe">Cafe</option>
+                <option value="saloon">saloon</option>
+
+  </Form.Select>
+              <Form.Select  aria-label="Default select example" >
+                <option>Select Shop</option>
+                <option value="food">Food</option>
+                <option value="cafe">Cafe</option>
+                <option value="saloon">saloon</option>
+
+              </Form.Select>
+            </Form>*/}
+            
           </div>
           <div className="form-group">
             <label>Services</label>

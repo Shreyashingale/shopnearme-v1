@@ -3,6 +3,7 @@ import styles from './Searchfield.module.css';
 import Form from 'react-bootstrap/Form';
 import Menu from '../NavBar/Menu';
 import axios from 'axios';
+import Button from 'react-bootstrap/Button';
 import ShopsTable from '../ShopsTable/ShopsTable';
 const Searchfields = () => {
     const [shops, setShops] = useState('');
@@ -11,6 +12,7 @@ const Searchfields = () => {
     const [dropDownField, setDropDownField] = useState('')
     const [pinCodeField, setPinCodeField] = useState('')
     const getShops = async (e) => {
+        e.preventDefault()
         setTable(true)
         axios.get(`/getShopByPincode/${dropDownField}/${pinCodeField}`)
             .then((res) => {
@@ -21,15 +23,15 @@ const Searchfields = () => {
             .catch((e) => {
                 console.log(e);
             })
-    }
+    } 
     const changeInputField = (e) => {
         setCategoryfield(e.target.value)
 
     }
     const hanldeDropDownChange = (e) => {
-        setDropDownField(e.target.value)
+        setDropDownField(e.target.value) 
     }
-    const changePincodeField = (e) => {
+    const changePincodeField = (e) =>{
         setPinCodeField(e.target.value);
         console.log(pinCodeField);
     }
@@ -53,19 +55,19 @@ const Searchfields = () => {
                             placeholder="Enter PinCode"
                             className={styles.inputField}
                             aria-label="Search"
-                            onChange={changePincodeField}
+                            onChange ={changePincodeField}
                         />
-
                         <Form.Select onChange={hanldeDropDownChange} aria-label="Default select example" className={styles.inputField}>
                             <option>Select Shop</option>
-                            <option value="food">Food</option>
+                            <option value="food">Food</option>n bhbkjv
                             <option value="cafe">Cafe</option>
                             <option value="saloon">saloon</option>
                             {console.log(dropDownField)}
 
                         </Form.Select>
+                        
 
-                        <button className={styles.searchBtn}  onClick={getShops}>Search</button>
+                        <Button className={styles.searchBtn} variant="outline-success" onClick={getShops}>Search</Button>
                     </div>
 
 
