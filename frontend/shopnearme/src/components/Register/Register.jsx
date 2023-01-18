@@ -3,18 +3,24 @@ import Menu from '../NavBar/Menu'
 import styles from './Register.module.css'
 import Form from 'react-bootstrap/Form';
 
+
 const Register = () => {
+  const [categoryValue, setCategoryValue] = useState("");
+  const handleCategory = (e) => {
+    setCategoryValue(e.target.value);
+  }
   //issue faced the name of variable should be equal to the schema names
   const [shop, setShop] = useState({
     shopName: "", category: "", services: "", address: "", coOrdinates: ""
   });
+  shop["category"] = categoryValue;//object properties
   let name, value;
   const handleInputs = (e) => {
-    console.log(e);
     name = e.target.name;
     value = e.target.value;
     console.log(shop[name]);
     setShop({ ...shop, [name]: value })
+   console.log(shop);
 
   }
   const postData = async (e) => {
@@ -50,37 +56,37 @@ const Register = () => {
           </div>
           <div className="form-group">
             <label>Category</label>
-            {/*<input type="text" className="form-control" placeholder="Category" name='category' value={shop.category} onChange={handleInputs} />*/}
+            {/* <input type="text" className="form-control" placeholder="Category" name='category' value={shop.category} onChange={handleInputs} /> */}
+            { /*heres the issue fix this later**/}
             <Form  >
-             { /*heres the issue fix this later*/}
-            <Form.Select  onChange={handleInputs} aria-label="Default select example" >
-              <option>Select Shop</option>
-              <option  name="category" value={shop.category}>Food</option>
-              <option  name="category" value={shop.category}>Cafe</option>
-              <option  name="category" value={shop.category}>saloon</option>
+              <Form.Select onChange={handleCategory} aria-label="Default select example"  className="form-control">
+                <option>Select Shop</option>
+                <option value="food">Food</option>
+                <option value="cafe">Cafe</option>
+                <option value="saloon">saloon</option>
+                {console.log(categoryValue)};
+              </Form.Select>
+            </Form>
 
-            </Form.Select>
-          </Form>
-
-      </div>
-      <div className="form-group">
-        <label>Services</label>
-        <input type="text" className="form-control" placeholder="Services" name='services' value={shop.services} onChange={handleInputs} />
-      </div>
-      <div className="form-group">
-        <label>Address</label>
-        <input type="text" className="form-control" placeholder="Address" name='address' value={shop.address} onChange={handleInputs} />
-      </div>
-      <div className="form-group">
-        <label>Coordinates</label>
-        <input type="text" className="form-control" placeholder="Coordinates" name='coOrdinates' value={shop.coOrdinates} onChange={handleInputs} />
-      </div>
-      <div className="form-group">
-        <label>Pincode</label>
-        <input type="text" className="form-control" placeholder="pinCode" name='pinCode' value={shop.pinCode} onChange={handleInputs} />
-      </div>
-      <button type="submit" className="btn btn-dark" onClick={postData}>Register</button>
-    </form>
+          </div>
+          <div className="form-group">
+            <label>Services</label>
+            <input type="text" className="form-control" placeholder="Services" name='services' value={shop.services} onChange={handleInputs} />
+          </div>
+          <div className="form-group">
+            <label>Address</label>
+            <input type="text" className="form-control" placeholder="Address" name='address' value={shop.address} onChange={handleInputs} />
+          </div>
+          <div className="form-group">
+            <label>Coordinates</label>
+            <input type="text" className="form-control" placeholder="Coordinates" name='coOrdinates' value={shop.coOrdinates} onChange={handleInputs} />
+          </div>
+          <div className="form-group">
+            <label>Pincode</label>
+            <input type="text" className="form-control" placeholder="pinCode" name='pinCode' value={shop.pinCode} onChange={handleInputs} />
+          </div>
+          <button type="submit" className="btn btn-dark" onClick={postData}>Register</button>
+        </form>
       </div >
     </>
   )

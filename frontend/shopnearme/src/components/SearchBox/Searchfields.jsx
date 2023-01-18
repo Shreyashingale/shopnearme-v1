@@ -60,7 +60,7 @@ const Searchfields = () => {
                         />
                         <Form.Select onChange={hanldeDropDownChange} aria-label="Default select example" className={styles.inputField}>
                             <option>Select Shop</option>
-                            <option value="food">Food</option>n bhbkjv
+                            <option value="food">Food</option>
                             <option value="cafe">Cafe</option>
                             <option value="saloon">saloon</option>
                             {console.log(dropDownField)}
