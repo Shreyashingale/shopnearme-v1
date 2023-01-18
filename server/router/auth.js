@@ -70,6 +70,7 @@ router.post('/addShop', async (req, res) => {//make this fun async
     //instead of req.body.shopName;
     const { shopName, category, services, address, coOrdinates,pinCode } = req.body;
     if (!shopName || !category || !services || !address || !coOrdinates || !pinCode) {
+        if(!category)return res.status(422).json({error:"please fill category"})
         return res.status(422).json({ error: "Please fill all the fields" });
     }
 

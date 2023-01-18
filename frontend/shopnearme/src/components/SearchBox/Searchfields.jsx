@@ -5,6 +5,7 @@ import Menu from '../NavBar/Menu';
 import axios from 'axios';
 import Button from 'react-bootstrap/Button';
 import ShopsTable from '../ShopsTable/ShopsTable';
+
 const Searchfields = () => {
     const [shops, setShops] = useState('');
     const [table, setTable] = useState(false);
@@ -12,7 +13,7 @@ const Searchfields = () => {
     const [dropDownField, setDropDownField] = useState('')
     const [pinCodeField, setPinCodeField] = useState('')
     const getShops = async (e) => {
-        e.preventDefault()
+        e.preventDefault()//this was causing the error of reolading
         setTable(true)
         axios.get(`/getShopByPincode/${dropDownField}/${pinCodeField}`)
             .then((res) => {
@@ -67,19 +68,19 @@ const Searchfields = () => {
                         </Form.Select>
                         
 
-                        <Button className={styles.searchBtn} variant="outline-success" onClick={getShops}>Search</Button>
+                        <button className={styles.searchBtn}  onClick={getShops}>Search</button>
                     </div>
 
 
                 </div>
-
             </Form>
+            {/*<Guide/>*/} 
             {!table &&
                 <h2 style={{ marginLeft: "600px", marginTop: "50px" }}>Welcome to the site :)</h2>
             }
             {shops.length > 0 && table && <ShopsTable shops={shops} />}
             {(table && !shops) &&
-
+                    //<img className={styles.image} src={NotFound} alt="" />
                 <h2 style={{ marginLeft: "600px", marginTop: "50px" }}>Sorry,No Result Found</h2>
             }
         </div>

@@ -4,7 +4,7 @@ import styles from './ShopsTable.module.css';
 const ShopsTable = (props) => {
     const {shops} = props;
     const mapArray = (project) => {
-        return (
+        return ( 
             <tbody >
                 <tr className="text-center" >
                     <td>{project.shopName}</td>

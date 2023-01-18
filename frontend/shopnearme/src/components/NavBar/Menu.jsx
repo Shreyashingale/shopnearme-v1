@@ -2,7 +2,6 @@ import {
   Link,
 } from "react-router-dom";
 import styles from './Menu.module.css';
-//<Link to="/register">Register</Link>
 function Menu() {
   return (
     <>

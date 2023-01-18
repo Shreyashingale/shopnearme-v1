@@ -48,46 +48,40 @@ const Register = () => {
             <input type="text" className="form-control" aria-describedby="emailHelp" placeholder="Enter Shop Name" name='shopName' value={shop.shopName} onChange={handleInputs} />
             <small className="form-text text-muted">Enter the shop name that you want to display</small>
           </div>
-          <div className="form-group"> 
+          <div className="form-group">
             <label>Category</label>
-            <input type="text" className="form-control" placeholder="Category" name='category' value={shop.category} onChange={handleInputs} />
-            {/*<Form  onChange={handleInputs}>
-              {/*<Form.Select onChange={handleInputs} aria-label="Default select example" value={shop.category} style={{width:"400px" , height:"40px"}}>
-                <option>Select Shop Category</option>
-                <option value="food">Food</option>
-                <option value="cafe">Cafe</option>
-                <option value="saloon">saloon</option>
+            {/*<input type="text" className="form-control" placeholder="Category" name='category' value={shop.category} onChange={handleInputs} />*/}
+            <Form  >
+             { /*heres the issue fix this later*/}
+            <Form.Select  onChange={handleInputs} aria-label="Default select example" >
+              <option>Select Shop</option>
+              <option  name="category" value={shop.category}>Food</option>
+              <option  name="category" value={shop.category}>Cafe</option>
+              <option  name="category" value={shop.category}>saloon</option>
 
-  </Form.Select>
-              <Form.Select  aria-label="Default select example" >
-                <option>Select Shop</option>
-                <option value="food">Food</option>
-                <option value="cafe">Cafe</option>
-                <option value="saloon">saloon</option>
+            </Form.Select>
+          </Form>
 
-              </Form.Select>
-            </Form>*/}
-            
-          </div>
-          <div className="form-group">
-            <label>Services</label>
-            <input type="text" className="form-control" placeholder="Services" name='services' value={shop.services} onChange={handleInputs} />
-          </div>
-          <div className="form-group">
-            <label>Address</label>
-            <input type="text" className="form-control" placeholder="Address" name='address' value={shop.address} onChange={handleInputs} />
-          </div>
-          <div className="form-group">
-            <label>Coordinates</label>
-            <input type="text" className="form-control" placeholder="Coordinates" name='coOrdinates' value={shop.coOrdinates} onChange={handleInputs} />
-          </div>
-          <div className="form-group">
-            <label>Pincode</label>
-            <input type="text" className="form-control" placeholder="pinCode" name='pinCode' value={shop.pinCode} onChange={handleInputs} />
-          </div>
-          <button type="submit" className="btn btn-dark" onClick={postData}>Register</button>
-        </form>
       </div>
+      <div className="form-group">
+        <label>Services</label>
+        <input type="text" className="form-control" placeholder="Services" name='services' value={shop.services} onChange={handleInputs} />
+      </div>
+      <div className="form-group">
+        <label>Address</label>
+        <input type="text" className="form-control" placeholder="Address" name='address' value={shop.address} onChange={handleInputs} />
+      </div>
+      <div className="form-group">
+        <label>Coordinates</label>
+        <input type="text" className="form-control" placeholder="Coordinates" name='coOrdinates' value={shop.coOrdinates} onChange={handleInputs} />
+      </div>
+      <div className="form-group">
+        <label>Pincode</label>
+        <input type="text" className="form-control" placeholder="pinCode" name='pinCode' value={shop.pinCode} onChange={handleInputs} />
+      </div>
+      <button type="submit" className="btn btn-dark" onClick={postData}>Register</button>
+    </form>
+      </div >
     </>
   )
 }
