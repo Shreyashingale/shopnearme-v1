@@ -14,19 +14,25 @@ The application is developed in MERN stack.Where mondodb atlas is used to stored
   1.1.Searchbox:<br />
             Here usercan enter the address or the pincode by which he need to find the near by shops by choosing category option the shops whcih are registered under the certain cateorgy only will be shown
 
-![image](https://user-images.githubusercontent.com/85663556/213169425-7f51cf49-c4f2-46a2-95ea-d26e77acb660.png)
+![image](https://github.com/Shreyashingale/shopnearme-v1/assets/85663556/16cf1b3b-5bb1-4083-ac11-7f7e969f99a7)
+
 
 2.This is the registration page for the shop owners to register there shop.<br />
  2.1.1.The shop must have unique name if the name is already used then you can't registered the shop.<br />
  2.1.2.Every filled is must need to filled in order to register the shop
 
 
-![image](https://user-images.githubusercontent.com/85663556/213169509-cd958dba-317c-4dc1-8cea-d985daa0ff63.png)
+![image](https://github.com/Shreyashingale/shopnearme-v1/assets/85663556/5d1cade5-0075-4aca-b3ba-13184d4862af)
+
 
 3.On this page the user will see the result based on the input he has filled
 
 
-![image](https://user-images.githubusercontent.com/85663556/213175308-24daed42-05aa-44cb-9ae4-76fc339410bc.png)
+![image](https://github.com/Shreyashingale/shopnearme-v1/assets/85663556/d5164f36-4228-41be-9f21-29063dff600a)
+
+![image](https://github.com/Shreyashingale/shopnearme-v1/assets/85663556/fb86ff17-1313-4137-9152-adb1b13737f7)
+
+
 
 
 ## Upcoming Updates:
