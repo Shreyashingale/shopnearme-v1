@@ -22,7 +22,7 @@ const shopSchema = new mongoose.Schema({
         type:String
     },
     pinCode:{
-        type:String//check number once here
+        type:String
     }
 
 })

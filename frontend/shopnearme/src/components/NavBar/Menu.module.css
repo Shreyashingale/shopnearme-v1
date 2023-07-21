@@ -7,21 +7,24 @@
     cursor: pointer;
     margin-left: 1vw;
 }
-.menu Link {
+
+.linkBar{
     text-decoration: none;
 }
 .menuTitle{
-    
     font-size: 2vw;
 }
 .menuTitle span{
     color: white;
     font-weight: bold;
 }
-.menuList{
-    color:rgb(254, 61, 209);
-
+#linkBar{
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
 }
-.menuList:hover{
-    color: pink;
+
+#linkBar li span{
+    color: white;
+    font-weight: bold;
 }

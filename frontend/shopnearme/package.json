@@ -18,7 +18,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "server": "nodemon index.js --ignore client",
+    "dev" : "concurrently \" npm run start \" \" nodemon ../../server /app.js\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

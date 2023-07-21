@@ -16,7 +16,7 @@ width: 100%;
 justify-content: center;
 }
 .inputField{
-    margin: 10px;
+    margin: 0px 10px;
 }
 h1{
     position: absolute;
@@ -25,13 +25,19 @@ h1{
 }
 .searchBtn{
     cursor: pointer;
-    width:350px;
+    width:400px;
+    height:38px;
     background-color: #343a40;
     color: whitesmoke;
     font-weight: 700;
+    margin:0px 10px;
 }
 .image{
-    margin-left: 450px;
+    margin-left: 500px;
     width:550px;
-    height: 450px;
+    height: 400px;
+}
+.loader{
+    margin-top: 50px;
+    margin-left: 700px;
 }

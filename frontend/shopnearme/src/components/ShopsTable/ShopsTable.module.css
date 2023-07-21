@@ -8,7 +8,7 @@
   th {
     min-width: 160px;
     padding: 10px;
-    color: #9FA2B4;
+    color: #ffff;
   }
   td{
     padding: 15px !important;
@@ -16,7 +16,7 @@
   
   }
   tr{
-    border-bottom: 1px solid #DFE0EB !important;
+    border-bottom: 1px solid #343a40 !important;
     justify-content: center;
     text-align: center;
     max-width: 90px!important;

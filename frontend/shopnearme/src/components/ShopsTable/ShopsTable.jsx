@@ -24,7 +24,7 @@ const ShopsTable = (props) => {
 
     <div className={styles.tableBox}>
         <table className={styles.tableCont}>
-            <tr style={{backgroundColor:"grey"}}>
+            <tr style={{backgroundColor:"#343a40"}}>
                 <th>ShopName</th>
                 <th>Category</th>
                 <th> Services</th>

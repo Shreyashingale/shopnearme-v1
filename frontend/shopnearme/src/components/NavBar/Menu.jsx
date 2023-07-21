@@ -10,13 +10,13 @@ function Menu() {
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" >Home </a>
+        <div className="collapse navbar-collapse" >
+          <ul className="navbar-nav ml-auto" id={styles.linkBar}>
+            <li className="nav-item">
+              <Link  to="/"><span>Home</span></Link>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" ><Link to="/register">Register</Link></a>
+            <li className="nav-item">
+              <Link style={{textDecoration:"none"}}  to="/register"><span>Register</span></Link>
             </li>
           </ul>
         </div>

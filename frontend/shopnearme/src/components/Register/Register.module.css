@@ -8,3 +8,21 @@
     width:400px;
     margin-top: 100px;
 }
+.btnDiv{
+    display: flex;
+
+}
+.searchBtn{
+    cursor: pointer;
+    width:120px;
+    text-align: left;
+    padding : 0 10px;
+    height:38px;
+    background-color: #343a40;
+    color: whitesmoke;
+    font-weight: 700;
+}
+.loader{
+    margin-top: 10px;
+    margin-left:-45px
+}
